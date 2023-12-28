@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(245.59deg, #99ae9d 0%, #ffffff 28.53%, #F6FBF4 75.52%);
+    color: #111111; /* White text color */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white; /* Dark gray background */
+  border: 1px solid #ffffff; /* White border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 20px;
+}
+
+
+.card p.price {
+  font-size: 2em; /* Larger size for price */
+  font-weight: bold; /* Bold text for price */
+  margin: 10px 0; /* Adjusted margin for price */
+}
+.price{
+    font-size: 2em;
+    font-weight: bold;
+}
+.card p {
+  font-size: 1em;
+  margin: 0 20px 20px;
+}
+
+.premium-details-container {
+  margin-top: 40px;
+  background-color: white; /* Dark gray background */
+  border: 1px solid #ffffff; /* White border */
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.premium-details {
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+select {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.result-box {
+    font-size: 1.2em;
+    padding: 10px;
+    width: auto;
+
+    background-color: #dde3dc; /* Dark gray background */
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+button.calculate-button {
+  background-color: #4a5f58; /* Green background */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/premi.css">
+  <title>Styled Card Layout</title>
+
+</head>
+<body>
+
+<div class="card">
+    <h2>Calculate Premi</h2>
+    <form id="premi-form" method="post" action="/premi">
+        <label for="jumlah_tahun">Lama Tahun:</label>
+        <select name="jumlah_tahun" required>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+        </select>
+        <br>
+        <button type="submit" class="calculate-button">Hitung Premi</button>
+    </form>
+</div>
+<div class="result-box">
+    {% if premi is not none %}
+        <p>Harga premi yang harus kamu bayar sebesar</p>
+        <br>
+        <p class="price"> ${{ premi }}</p>
+    {% else %}
+        <p>Belum ada hasil perhitungan premi.</p>
+    {% endif %}
+</div>
+</body>
+</html>

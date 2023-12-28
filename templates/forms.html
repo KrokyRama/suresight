@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Data Entry  | Suresight</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700'>
+  <link rel="stylesheet" href="static/forms.css">
+
+</head>
+<body class="form-body">
+<!-- partial:index.partial.html -->
+<div class="msg">
+  <a href="/">
+    <h1 style="position:fixed; color: white">Selamat Datang {{ nama }}</h1>
+    </a>
+</div>
+<br>
+<form action='/result' class='form' method="POST">
+
+<!--  fiel require untuk full-->
+  <p class='field required half'>
+    <label class='label required' for='age'>Umur</label>
+    <input class='text-input' id='age' name='age' required type='number' placeholder='Masukkan Umur' >
+  </p>
+  <p class='field required half'>
+    <label class='label' for='weight'>Berat Badan</label>
+    <input class='text-input' id='weight' name='weight' required type='number' placeholder="Masukkan Berat Badan (kg)">
+  </p>
+  <p class='field required half'>
+    <label class='label' for='height'>Tinggi Badan</label>
+    <input class='text-input' id='height' name='height' required type='number' placeholder="Masukkan Tinggi Badan (cm)">
+  </p>
+  <!-- <p class='field required half'>
+    <label class='label' for='bloodpressure'>Tekanan Darah</label>
+    <input class='text-input' id='bloodpressure' name='bloodpressure' required type='number' placeholder="Masukkan Tekanan Darah">
+  </p> -->
+<!--  'field half required error' untuk error-->
+<!--  <p class='field required half'>-->
+<!--    <label class='label' for='password'>Password</label>-->
+<!--    <input class='text-input' id='password' name='password' required type='text'>-->
+<!--  </p>-->
+
+
+  <div class='field half'>
+    <label class='label'>Jenis Kelamin</label>
+    <ul class='options'>
+      <li class='option'>
+        <input class='option-input' id='female' name='sex' type='radio' value='0'>
+        <label class='option-label' for='female'>Perempuan</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='male' name='sex' type='radio' value='1'>
+        <label class='option-label' for='male'>Laki-Laki</label>
+      </li>
+    </ul>
+  </div>
+
+  <div class='field half'>
+    <label class='label'>Perokok</label>
+    <ul class='options'>
+      <li class='option'>
+        <input class='option-input' id='smoker' name='smoker' type='radio' value='1'>
+        <label class='option-label' for='smoker'>Merokok</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='non-smoker' name='smoker' type='radio' value='0'>
+        <label class='option-label' for='non-smoker'>Tidak Merokok</label>
+      </li>
+    </ul>
+  </div>
+
+  <div class='field half'>
+    <label class='label'>Diabetes</label>
+    <ul class='options'>
+      <li class='option'>
+        <input class='option-input' id='diabetes' name='diabetes' type='radio' value='1'>
+        <label class='option-label' for='diabetes'>Iya</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='no-diabetes' name='diabetes' type='radio' value='0'>
+        <label class='option-label' for='no-diabetes'>Tidak</label>
+      </li>
+    </ul>
+  </div>
+
+  <div class='field half'>
+    <label class='label'>Rutin Olahraga</label>
+    <ul class='options'>
+      <li class='option'>
+        <input class='option-input' id='exercise' name='regular_ex' type='radio' value='1'>
+        <label class='option-label' for='exercise'>Iya</label>
+      </li>
+      <li class='option'>
+        <input class='option-input' id='no-exercise' name='regular_ex' type='radio' value='0'>
+        <label class='option-label' for='no-exercise'>Tidak</label>
+      </li>
+    </ul>
+  </div>
+<!--  <p class='field'>-->
+<!--    <label class='label' for='about'>About</label>-->
+<!--    <textarea class='textarea' cols='50' id='about' name='about' rows='4'></textarea>-->
+<!--  </p>-->
+  <p class='field half'>
+    <label class='label' for='no_of_dependents'>Jumlah Tanggungan</label>
+    <select class='select' id='no_of_dependents' name="no_of_dependents">
+      <option value='0'>0</option>
+      <option value='1'>1</option>
+      <option value='2'>2</option>
+      <option value='3'>3</option>
+      <option value='4'>4</option>
+      <option value='5'>5</option>
+    </select>
+  </p>
+
+  <p class='field half'>
+    <label class='label' for='city'>Asal Kota</label>
+    <select class='select' id='city' name="city">
+      <option value='0'>New York</option>
+      <option value='1'>Los Angeles</option>
+      <option value='2'>Chicago</option>
+      <option value='3'>Houston</option>
+      <option seelcted value='4'>Philadelphia</option>
+      <option value='5'>Phoenix</option>
+      <option value='6'>San Antonio</option>
+      <option value='7'>San Diego</option>
+      <option value='8'>Dallas</option>
+      <option value='9'>San Jose</option>
+      <option value='10'>Austin</option>
+      <option value='11'>Jacksonville</option>
+      <option value='12'>San Francisco</option>
+      <option value='13'>Indianapolis</option>
+      <option value='14'>Columbus</option>
+    </select>
+  </p>
+
+
+  <p class='field half'>
+    <label class='label' for='job_title'>Pekerjaan</label>
+    <select class='select' id='job_title' name="job_title">
+      <option value='0'>Aktor</option>
+      <option value='1'>Insinyur</option>
+      <option value='2'>Akademisi</option>
+      <option value='3'>Koki</option>
+      <option value='4'>Pembuat Rumah Tangga</option>
+      <option value='5'>Penari</option>
+      <option value='6'>Penyanyi</option>
+      <option value='7'>Ilmuwan Data</option>
+      <option value='8'>Polisi</option>
+      <option selected value ='9'>Pelajar</option>
+      <option value='10'>Dokter</option>
+      <option value='11'>Manajer</option>
+      <option value='12'>Fotografer</option>
+      <option value='13'>Ahli Kecantikan</option>
+      <option value='14'>CA (Chartered Accountant)</option>
+      <option value='15'>Blogger</option>
+      <option value='16'>CEO</option>
+      <option value='17'>Buruh</option>
+      <option value='18'>Akuntan</option>
+      <option value='19'>Sutradara Film</option>
+      <option value='20'>Teknisi</option>
+      <option value='21'>Perancang Busana</option>
+      <option value='22'>Arsitek</option>
+      <option value='23'>Penjaga Rumah Tangga</option>
+      <option value='24'>Pembuat Film</option>
+      <option value='25'>Pengusaha</option>
+      <option value='26'>Politisi</option>
+      <option value='27'>Personil Pertahanan</option>
+      <option value='28'>Analis</option>
+      <option value='29'>Panitera</option>
+      <option value='30'>IT Profesional</option>
+      <option value='31'>Petani</option>
+      <option value='32'>Jurnalis</option>
+      <option value='33'>Pengacara</option>
+      <option value='34'>Pegawai Pemerintah</option>
+    </select>
+  </p>
+
+
+  <p class='field half'>
+    <label class='label' for='hereditary_diseases'>Penyakit Turunan</label>
+    <select class='select' id='hereditary_diseases' name="hereditary_diseases">
+      <option selected value='0'>Tidak Ada Penyakit</option>
+      <option value='1'>Epilepsi</option>
+      <option value='2'>Penyakit Mata</option>
+      <option value='3'>Alzheimer</option>
+      <option value='4'>Radang Sendi</option>
+      <option value='5'>Penyakit Jantung</option>
+      <option value='6'>Diabetes</option>
+      <option value='7'>Kanker</option>
+      <option value='8'>TD Tinggi (Tekanan Darah Tinggi)</option>
+      <option value='9'>Obesitas</option>
+    </select>
+  </p>
+
+
+  <p class='field half'>
+    <input class='button' type='submit' value='Send'>
+  </p>
+</form>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.customSelect/0.5.1/jquery.customSelect.min.js'></script>
+<script src='https://codepen.io/mican/pen/XgRmNr.js'></script>
+<script type="text/javascript" src="/static/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/static/bootstrap.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width")
+      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    }
+  </script>
+
+</body>
+
+</html>
