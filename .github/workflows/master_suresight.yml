@@ -66,4 +66,4 @@ jobs:
         with:
           app-name: 'suresight'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D07DE2E0EC714DD498EE215FF456857B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_028CAFCAEA3F4BCF96A683743F3965CB }}
